@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/background_color"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:adjustViewBounds="true"
+        android:maxWidth="100dp"
+        android:maxHeight="100dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/starwars"
+         />
+
+    <EditText
+        android:id="@+id/zipcode_edittext"
+        android:layout_width="wrap_content"
+        android:textColor="@color/white"
+        android:layout_height="wrap_content"
+        android:ems="5"
+        android:inputType="number"
+        android:hint="Zipcode"
+        />
+
+    <Button
+        android:id="@+id/confirm_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="confirm"
+        android:layout_marginLeft="4dp"
+        android:layout_alignBottom="@id/zipcode_edittext"
+        android:layout_toRightOf="@id/zipcode_edittext"/>
+
+    <TextView
+        android:id="@+id/cur_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cur_weather_image"
+        android:padding="16dp"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="40dp"
+        android:text="Temp" />
+
+    <TextView
+        android:id="@+id/cur_high"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/cur_temp"
+        android:layout_marginLeft="60dp"
+        android:layout_below="@id/condition"
+        android:textSize="18dp"
+        android:text="H: " />
+    <TextView
+        android:id="@+id/cur_low"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cur_high"
+        android:layout_alignStart="@id/cur_high"
+        android:layout_marginTop="10dp"
+        android:textSize="18dp"
+        android:text="L: " />
+
+    <TextView
+        android:id="@+id/quote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cur_temp"
+        android:layout_alignStart="@id/cur_temp"
+        android:layout_marginTop="10dp"
+        android:textSize="18dp"
+        android:text="Quote" />
+
+    <TextView
+        android:id="@+id/condition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/cur_weather_image"
+        android:layout_alignTop="@id/cur_weather_image"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="12dp"
+        android:textSize="40dp"
+        android:text="Condition" />
+
+    <ImageView
+        android:id="@+id/cur_weather_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/date"
+        android:adjustViewBounds="true"
+        android:maxWidth="80dp"
+        android:maxHeight="80dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/clear_sky" />
+
+    <TextView
+        android:id="@+id/city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="City"
+        android:textSize="26dp"
+        android:layout_below="@id/confirm_button"
+        android:layout_centerHorizontal="true"
+        />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/lon"
+        android:layout_below="@id/lat"
+        android:layout_marginBottom="5dp"
+        android:text="Date" />
+
+    <TextView
+        android:id="@+id/lat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/city"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="64dp"
+        android:text="Lat" />
+
+    <TextView
+        android:id="@+id/lon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/city"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="64dp"
+        android:text="Lon" />
+
+    <TextView
+        android:id="@+id/curTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/date"
+        android:layout_alignBottom="@id/date"
+        android:layout_alignStart="@id/lat"
+        android:text="Time" />
+
+    <TextView
+        android:id="@+id/forecast_high1"
+        android:layout_above="@id/forecast_low1"
+        android:layout_alignEnd="@id/forecast1_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="high1" />
+
+    <TextView
+        android:id="@+id/forecast_low1"
+        android:layout_above="@id/forecast1_image"
+        android:layout_alignEnd="@id/forecast1_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/forecast_high2"
+        android:layout_above="@id/forecast_low2"
+        android:layout_alignEnd="@id/forecast2_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="high1" />
+
+    <TextView
+        android:id="@+id/forecast_low2"
+        android:layout_above="@id/forecast2_image"
+        android:layout_alignEnd="@id/forecast2_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/forecast_high3"
+        android:layout_above="@id/forecast_low3"
+        android:layout_width="wrap_content"
+        android:layout_alignEnd="@id/forecast3_image"
+        android:layout_height="wrap_content"
+        android:text="high1" />
+
+    <TextView
+        android:id="@+id/forecast_low3"
+        android:layout_width="wrap_content"
+        android:layout_alignEnd="@id/forecast3_image"
+        android:layout_above="@id/forecast3_image"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/forecast_high4"
+        android:layout_above="@id/forecast_low4"
+        android:layout_alignEnd="@id/forecast4_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="high1" />
+
+    <TextView
+        android:id="@+id/forecast_low4"
+        android:layout_width="wrap_content"
+        android:layout_alignEnd="@id/forecast4_image"
+        android:layout_above="@id/forecast4_image"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
+
+
+    <ImageView
+        android:id="@+id/forecast1_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:maxWidth="50dp"
+        android:maxHeight="50dp"
+        android:scaleType="fitCenter"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="32dp"
+        android:src="@drawable/clear_sky" />
+
+    <ImageView
+        android:id="@+id/forecast2_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:maxHeight="50dp"
+        android:maxWidth="50dp"
+        android:scaleType="fitCenter"
+        android:layout_toRightOf="@id/forecast1_image"
+        android:layout_alignTop="@id/forecast1_image"
+        android:layout_marginLeft="32dp"
+        android:src="@drawable/clear_sky" />
+
+    <ImageView
+        android:id="@+id/forecast3_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:maxHeight="50dp"
+        android:maxWidth="50dp"
+        android:scaleType="fitCenter"
+        android:layout_toRightOf="@id/forecast2_image"
+        android:layout_alignTop="@id/forecast1_image"
+        android:layout_marginLeft="32dp"
+        android:src="@drawable/clear_sky" />
+
+    <ImageView
+        android:id="@+id/forecast4_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:maxHeight="50dp"
+        android:maxWidth="50dp"
+        android:scaleType="fitCenter"
+        android:layout_toRightOf="@id/forecast3_image"
+        android:layout_alignTop="@id/forecast1_image"
+        android:layout_marginLeft="32dp"
+        android:src="@drawable/clear_sky" />
+
+    <TextView
+        android:id="@+id/forecast_time1"
+        android:layout_width="60dp"
+        android:layout_alignBottom="@id/forecast_time2"
+        android:layout_alignEnd="@id/forecast1_image"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/forecast_time2"
+        android:layout_width="60dp"
+        android:layout_below="@id/forecast2_image"
+        android:layout_alignEnd="@id/forecast2_image"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/forecast_time3"
+        android:layout_width="60dp"
+        android:layout_below="@id/forecast3_image"
+        android:layout_alignEnd="@id/forecast3_image"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/forecast_time4"
+        android:layout_below="@id/forecast4_image"
+        android:layout_alignEnd="@id/forecast4_image"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+        android:text="TextView" />
+
+
+</RelativeLayout>
